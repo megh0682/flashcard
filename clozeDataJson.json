@@ -10,5 +10,9 @@
   {
     "text": "George Washington is first president of United Stated",
     "cloze": "George Washington"
+  },
+  {
+    "text": "Boys like blue color",
+    "cloze": "blue"
   }
 ]

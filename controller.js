@@ -59,14 +59,14 @@ function askuser(){
                   fs.readFile('./basicDataJson.json','utf8' ,function(err,data){
                         if(err)
                             console.error(err);
-                            console.log(data);
+                            //console.log(data);
                             var jsonData = JSON.parse(data);
                             var createBasicCard = BasicCard(answers.front, answers.back);
                             jsonData.push(createBasicCard);
                             fs.writeFile('./basicDataJson.json',JSON.stringify(jsonData, null, 2) ,function(err){
                             if(err)
                             console.error(err);
-                            console.log('written basic card to json file!');
+                            //console.log('written basic card to json file!');
                             });
                     askuser();                        
                    });
@@ -90,14 +90,14 @@ function askuser(){
                         fs.readFile('./clozeDataJson.json','utf8' ,function(err,data){
                                 if(err)
                                     console.error(err);
-                                    console.log(data);
+                                    //console.log(data);
                                     var jsonData = JSON.parse(data);
                                     var createClozeCard = ClozeCard(answers.fulltext, answers.cloze);
                                     jsonData.push(createClozeCard);
                                     fs.writeFile('./clozeDataJson.json',JSON.stringify(jsonData, null, 2) ,function(err){
                                     if(err)
                                     console.error(err);
-                                    console.log('written cloze card to json file!');
+                                    //console.log('written cloze card to json file!');
                                     });
                             askuser();                        
                         });
@@ -108,7 +108,7 @@ function askuser(){
                 fs.readFile('./basicDataJson.json','utf8' ,function(err,data){
                 if(err)
                 console.error(err);
-                console.log(data);
+                //console.log(data);
                 var jsonData = JSON.parse(data);
                 var len = jsonData.length;
                 var i =0;
@@ -119,7 +119,7 @@ function askuser(){
                 fs.readFile('./clozeDataJson.json','utf8' ,function(err,data){
                 if(err)
                 console.error(err);
-                console.log(data);
+                //console.log(data);
                 var jsonData = JSON.parse(data);
                 var len = jsonData.length;
                 var i =0;
@@ -148,7 +148,7 @@ askuser();
 function clozeCardPrompt(jsonData,len,i){
     var element = jsonData[i];
     i = i+1;
-    console.log(element);
+    //console.log(element);
     var clozeCardObject = ClozeCard(element.text,element.cloze);
     var partialText = clozeCardObject.getPartialText();
     var clozeText = clozeCardObject.getCloze();
@@ -199,7 +199,7 @@ function clozeCardPrompt(jsonData,len,i){
 function basicCardPrompt(jsonData,len,i){
     var element = jsonData[i];
     i = i+1;
-    console.log(element);
+    //console.log(element);
     var basicCardObject = BasicCard(element.front,element.back);
     var front = basicCardObject.getFrontText();
     var back = basicCardObject.getBackText();
@@ -232,7 +232,7 @@ function basicCardPrompt(jsonData,len,i){
                 if(i<len){
                 basicCardPrompt(jsonData,len,i);
                 }else{
-                console.log("Great you have completed all the questions!");
+                console.log("you completed all the questions!");
                 askuser();
                 }
             }else if(answers.action === "exit play basic flash cards section..."){
