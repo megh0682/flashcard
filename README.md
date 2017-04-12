@@ -1,3 +1,3 @@
 # flashcard
 1) **clone the repository**
-2) **run node controller.js to start the flashcard application
+2) **run node controller.js to start the flashcard application**
