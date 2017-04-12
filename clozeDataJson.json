@@ -1,0 +1,14 @@
+[
+  {
+    "text": "Alan Turing is father of computers",
+    "cloze": "Alan Turing"
+  },
+  {
+    "text": "In the year 1969 man landed on moon for the very first time",
+    "cloze": "1969"
+  },
+  {
+    "text": "George Washington is first president of United Stated",
+    "cloze": "George Washington"
+  }
+]
